@@ -1,0 +1,216 @@
+Title: Documentation
+
+----
+
+Text:
+
+(image: truva-cover.png class: full)
+
+(lead…)
+Truva is a blog theme based on **Material Design Lite** and adapted for **Kirby CMS**. It includes a **Color Palette** to personalise your theme with 288 combinations of material colors. It also bundle **Disqus** comment system, **social share** links, google analytic and a few other components. We also made it **multi-language ready** to get your site up and running in no time.
+(…lead)
+
+## Table of Content
+<!-- MarkdownTOC -->
+
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+  1. [Download](#download)
+  2. [Install](#install)
+  3. [Enter the license key](#license)
+  4. [Configure](#configure)
+3. [Usage](#usage)
+  1. [Blog entry](#usage-blog)
+  2. [Pages](#usage-page)
+  3. [Formatting text](#usage-formatting-text)
+4. [Advanced](#advanced)
+  1. [Site Configuration](#advanced-configuration)
+  2. [Multi-language Site](#advanced-multilang)
+  3. [Support Widget](#advanced-support-widget)
+5. [Credits](#credits)
+6. [Changelog](#changelog)
+
+<!-- /MarkdownTOC -->
+
+## Features {#features}
+(columns size:1/3 phone-size:1 tablet-size:1/2)
+
+##### Build for Kirby CMS
+[Kirby CMS](http://getkirby.com) is a flat file Content Managment System. Easy to setup and easy to use yet very powerful.
+
+++++
+
+##### Material Color Palette
+From the Panel you can choose from 288 Material Colors combinations.
+
+++++
+
+##### Disqus Comments
+ The web’s most popular discussion system, Disqus enables comments on your site for free.
+
+++++
+
+##### Optimized Share links
+Share on popular social networks without the slowdown of official buttons.
+
+++++
+
+##### Open Graph Support
+Beautifully display a preview of your shared pages and article on facebook, twitter and other popular social networks.
+
+++++
+
+##### Fully Responsive Design
+Serve an optimized version of your site to visitors using tablets and mobile devices.
+
+++++
+
+##### Multi-Language Support
+Translate the theme into any language you wish using the included language files. Everything you need to get started.
+
+++++
+
+##### Cross Browser Support
+Compatible with the latest versions of all modern browsers - Chrome, Safari, FireFox, Opera, IE10 and above.
+
+++++
+
+##### Sources Files Included
+Raw JavaScripts and CSS files and ready to use build system are included for any advanced customisation you might need.
+
+(…columns)
+
+## Getting Started {#getting-started}
+### Download {#download}
+Grab the last version of [Truva Theme](http://aristotheme.com/truva-material-design-lite-blog-theme-for-kirby-cms.html){.mdl-button .mdl-js-button .mdl-button--raised .mdl-button--accent}
+
+### Install {#install}
+1. Extract all the files and upload them in the root of your web host. Visit your website to check the installation.
+2. Truva comes with a preconfigured account. To access the panel navigate to `http://yourdomain.com/panel` and use the following identifiants:
+  - **username:** demo
+  - **password:** demo
+
+### Enter the license key {#license}
+Using [Kirby CMS](http://getkirby.com) in a production environment requires the purchase of a license.
+Once you get your license, go to `/site/config/config.php` and search for
+
+```
+c::set('license', 'your license key');
+```
+
+Fill in your license code to complete your installation of Kirby.
+
+### Configure {#configure}
+From the Panel, go to the **Users** menu to change your password. You can also change your name and avatar which will be display in blog posts.
+
+Still from the Panel, go on **Site options** to change the name of your site, the description for search engines, your social networks handle and chose the theme of you site from the **Material Color Palette**
+
+You can change your site logo, background image... by putting them in **site files** using the following naming convention:
+
+| Filename          | Usage
+|-------------------|-------------
+| `bg`              | Backgound image for your blog
+| `logo`            | Your site logo
+| `social-header`   | the default image in social share previews
+
+## Usage {#usage}
+### Blog entry {#usage-blog}
+1. Add your blog entry by creating a subpage of **Blog** in the panel.
+2. Turn your page status to visible to publish it.
+3. You can add a cover image for your post by adding an image file with the name **header**
+
+### Pages {#usage-page}
+1. Add a page with the default template from the panel.
+2. Turn it's status to visible to publish it and make it appear in the menu.
+3. You can also add a image header by adding an image file with the name **header** to your page.
+
+### Formatting text {#usage-formatting-text}
+You are invited to read the [Kirby doc](http://getkirby.com/docs/content/text) to learn more about **Markdown** and **Kirbytext** and how to use them.
+
+
+## Advanced {#advanced}
+### Site Configuration {#advanced-configuration}
+Some available options can be set in your config file in `/site/config` like this:
+```
+c::set('option', 'value');
+```
+| Option                       | Type   | Description
+|------------------------------|--------|------------
+| `blog.postPerPage`           | Number | Number of Posts to display per page
+| `feed.postNumber`            | Number | Number of items to display in the rss feed
+| `disqus.shortname`           | String | Disqus shortname to enable comments
+| `google-analytics.tackingid` | String | Google Analytics tracking ID
+
+### Multi-language Site {#advanced-multilang}
+Our Themes are ready to be translated. Only 3 steps are required.
+
+#### Configure your languages
+First you need to tell kirby wich languages you will be using, this is done by editing the `/site/config/config.php` file.
+English is pre-registered and set as a default language, so you just need to add your other languages as a simple associative array.
+
+```
+c::set('languages', array(
+  array(
+    'code'    => 'en',
+    ...
+  ),
+  array(
+    'code'    => 'fr',
+    'name'    => 'FR',
+    'locale'  => 'fr_FR',
+    'url'     => '/fr',
+  )
+));
+```
+
+#### Translate Theme Variables
+Navigate into the `/sites/languages` folder and duplitate the file `en.php` and name it with the specific language shortcode.
+Repeat for each available languages and edit the new files with you translations.
+
+
+#### Translate your Content
+You can now translate your content throught the Panel.
+
+### Support Widget {#advanced-support-widget}
+Displays a widget in the kirby panel's dashboard showing support options.
+You can customize everything in this widget, it is particulary useful for web agencies who can show their support informations in their client's dashboards.
+
+#### Options
+All available options can be set in your config file in `/site/config` like this:
+```
+c::set('option', 'value');
+```
+| Option                     | Type    | Description
+|----------------------------|---------|------------
+| `aristotheme.widget`       | Boolean | Display the Aristotheme widget in the dashboard.
+| `aristotheme.widget.title` | String  | The Widget Title
+| `aristotheme.widget.links` | array() | The links to be displayed in the widget.
+
+#### Adding links
+Links are simple associative arrays with 3 fields required: **label**, **text** and **href**.
+
+```php
+c::set('aristotheme.widget.links', array(
+  array(
+    "label" => "Support",
+    "text" => "On our Forum",
+    "href" => "http://forum.example.com/support"
+  ),
+  array(
+    ...
+  )
+));
+```
+
+## Credits {#credits}
+- [Kirby CMS](http://getkirby.com){#kirby-cms}
+- [Relative Date Plugin](http://getkirby-plugins.com/relative-date)
+- [Material Design Lite](http://www.getmdl.io){#getmdl}
+
+## Changelog {#changelog}
+**v1.1.0**
+- Security update to kirby 2.1.1
+- Various bugfixes
+
+**v1.0.0**
+- initial release

@@ -1,0 +1,8 @@
+Title: Error
+
+----
+
+Text:
+# 404
+## The page has not been found.
+You may want to go back to (link: home text: back home)

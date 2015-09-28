@@ -1,0 +1,12 @@
+.DS_Store
+.idea
+
+node_modules
+
+thumbs/*
+!thumbs/.gitkeep
+site/cache/*
+!site/cache/index.html
+site/config/*
+!site/config/config.php
+site/snippets/aristotheme-bar.php

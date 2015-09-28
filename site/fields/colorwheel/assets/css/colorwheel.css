@@ -1,0 +1,39 @@
+
+.colorwheel .color {color: #fff;}
+.colorwheel .color.disabled {opacity: .2;}
+
+.colorwheel .color.deep_orange {background-color: #ff5723;}
+.colorwheel .color.red {background-color: #f44336;}
+.colorwheel .color.pink {background-color: #e91e63;}
+.colorwheel .color.purple {background-color: #9c27b0;}
+.colorwheel .color.deep_purple {background-color: #673ab7;}
+.colorwheel .color.indigo {background-color: #3f51b5;}
+.colorwheel .color.blue {background-color: #2096f3;}
+.colorwheel .color.light_blue {background-color: #04a9f4;}
+.colorwheel .color.cyan {background-color: #01bcd4;}
+.colorwheel .color.teal {background-color: #009688;}
+.colorwheel .color.green {background-color: #4caf50;}
+.colorwheel .color.light_green {background-color: #8bc34a;}
+.colorwheel .color.lime {background-color: #cddc39;}
+.colorwheel .color.yellow {background-color: #ffeb3b;}
+.colorwheel .color.amber {background-color: #ffc108;}
+.colorwheel .color.orange {background-color: #ff9901;}
+.colorwheel .color.brown {background-color: #795548;}
+.colorwheel .color.blue_grey {background-color: #607d8c;}
+.colorwheel .color.grey {background-color: #9e9e9e;}
+
+.colorwheel label {position: relative;}
+
+.colorwheel label.primary:after {
+  content: 'primary';
+  right: 5px;
+  position: absolute;
+  font-weight: bold;
+}
+
+.colorwheel label.accent:after {
+  content: 'accent';
+  right: 5px;
+  position: absolute;
+  font-weight: bold;
+}
