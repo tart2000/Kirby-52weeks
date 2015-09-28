@@ -56,41 +56,30 @@
   
         <div class="demo-blog__posts mdl-grid">
 
-          <?php $first = true ?>
-          <?php foreach ($posts as $post): ?>
-            <div class="mdl-card mdl-cell mdl-cell--<?php echo ($first) ? '8' : '6' ?>-col">
-              <?php if ($post->cover()): ?>
-                <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary" style="background-image: url(<?php echo $post->cover()->url() ?>)">
+          <?php foreach (page('challenges')->children() as $post): ?>
+            <div class="mdl-card mdl-cell mdl-cell--4-col">
+              <?php if ($post->hasImages()): ?>
+                <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary" style="background-image: url(<?php echo $post->images()->first()->url() ?>)">
               <?php else: ?>
                 <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary">
               <?php endif ?>
                 <h3><a href="<?php echo $post->url() ?>"><?php echo $post->title() ?></a></h3>
               </div>
-              <?php if (!$post->text()->empty()): ?>
-              <div class="mdl-color-text--grey-600 pad16">
-                  <?php echo kirbytext(str::short($post->text(), 250)); ?>
-              </div>
-              <?php endif ?>
               <?php if ($post->author()): ?>
+              <?php $author = $site->user($post->author()) ?>
                 <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                  <div class="minilogo" style="background-image: url(<?php echo $post->author()->avatar()->url() ?>)"></div>
+                  <div class="minilogo" style="background-image: url(<?php echo $author->avatar()->url() ?>)"></div>
                   <div>
-                  <?php if ($post->author()->firstName() || $post->author()->lastName()): ?>
-                    <strong><?php echo $post->author()->firstName() ?> <?php echo $post->author()->lastName() ?></strong>
+                  <?php if ($author->firstName() || $author->lastName()): ?>
+                    <strong><?php echo $author->firstName() ?> <?php echo $author->lastName() ?></strong>
                   <?php else: ?>
-                    <strong><?php echo $post->author()->username() ?></strong>
+                    <strong><?php echo $author->username() ?></strong>
                   <?php endif ?>
-                    <span><?php echo kirbytext('(relativedate: ' . $post->date('Y-m-d') . ' lang: ' . $site->language()->code() . ')') ?></span>
+                    <span>Week <?php echo $post->children()->count() ?>/52</span>
                   </div>
                 </div>
               <?php endif ?>
             </div>
-
-            <!-- Display the meta card only after the first card -->
-            <?php if ($first): ?>
-              <?php snippet('meta-card') ?>
-              <?php $first = false; ?>
-            <?php endif ?>
 
           <?php endforeach ?>
 
