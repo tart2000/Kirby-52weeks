@@ -6,7 +6,7 @@
       <?php if ($page->hasImages()) : ?>
         <div class="challenge-head" style="background-image:url('<?php echo $page->images()->first()->url() ?>');">
           <div class="logo">
-            <img src="<?php echo $site->url() ?>/assets/images/52weeks.png">
+            <img src="<?php echo $site->url() ?>/assets/images/52weeks2.png">
           </div>
           <div class="challenge-title">
             <h3>Get better at <span id="text-anim">technology</span>!</h3>
