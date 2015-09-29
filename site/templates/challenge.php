@@ -22,7 +22,6 @@
 			<p><?php echo $page->text() ?></p>
 			<strong>by <?php echo $user ?></strong>
 		</div>
-
 	</div>
 <?php endif ?>
 <!-- end banner --> 
@@ -39,7 +38,7 @@
 		<?php foreach($page->children() as $week) : ?>
 			<div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
 	            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php echo $week->images()->first()->url() ?>)">
-	              <h3><a href="#"><?php echo $week->title(); ?></a></h3>
+	              <h3><a href="<?php echo $week->url() ?>"><?php echo $week->title(); ?></a></h3>
 	            </div>
 	            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
 	              	<div>
@@ -50,6 +49,7 @@
  			<?php $counter++ ?>
 		<?php endforeach ?>
 		</div>
+		
 <?php snippet('footer') ?>
 
 

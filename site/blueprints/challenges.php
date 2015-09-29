@@ -2,9 +2,6 @@
 
 title: Challenges
 pages:
-  num: date
-  field: date
-  sort: flip
   template: challenge
 fields:
   title:

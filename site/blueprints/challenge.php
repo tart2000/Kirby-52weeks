@@ -13,6 +13,12 @@ fields:
   author:
     label: Author
     type: user
+  postimage:
+    label: Cover image
+    type:  selector
+    mode:  single
+    types:
+      - image
   text: 
   	label: Objectives
   	type: textarea

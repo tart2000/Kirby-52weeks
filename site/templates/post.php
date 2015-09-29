@@ -3,14 +3,15 @@
 <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
   <main class="mdl-layout__content">
     <div class="demo-back">
-      <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php echo $page->blog()->url() ?>">
+      <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php echo $page->parent()->url() ?>">
         <i class="material-icons">arrow_back</i>
       </a>
     </div>
     <div class="demo-blog__posts mdl-grid">
-      <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-        <?php if ($page->cover()): ?>
-          <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary" style="background-image: url(<?php echo $page->cover()->url() ?>)">
+      <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col post">
+        <?php $postcover = $page->postimage()->toFile(); ?>
+        <?php if ($postcover): ?>
+          <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary" style="background-image: url('<?php echo $postcover->url() ?>')">
         <?php else: ?>
           <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary">
         <?php endif ?>

@@ -32,7 +32,7 @@ body {
   padding-bottom: 20px;
 }
 .col-3 i {
-  font-size: 60px;
+  font-size: 80px;
 }
 .col-3 p {
   font-size: 1.2em;
@@ -50,6 +50,9 @@ body {
 }
 .avatar img {
   border-radius: 50%; 
+}
+.post {
+  margin-top: 80px;
 }
 /* Challenges */
 .challenge_content {

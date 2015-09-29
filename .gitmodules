@@ -7,3 +7,6 @@
 [submodule "site/widgets/aristotheme"]
 	path = site/widgets/aristotheme
 	url = https://github.com/Thomas-Lebeau/kirby-aristotheme-support-widget.git
+[submodule "site/fields/selector"]
+	path = site/fields/selector
+	url = https://github.com/storypioneers/kirby-selector.git

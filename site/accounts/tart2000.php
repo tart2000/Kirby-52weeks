@@ -7,8 +7,7 @@ password: >
 language: en
 role: admin
 history:
-  - 3d-printing/legosahedron
-  - 3d-printing
+  - challenges/3d-printing/legosahedron
   - blog/coffee-pic
 firstname: Arthur
 lastname: Schmitt
