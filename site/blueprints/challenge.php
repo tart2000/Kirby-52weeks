@@ -4,7 +4,6 @@ title: Challenge
 pages:
   num: date
   field: date
-  sort: flip
   template: post
 fields:
   title:

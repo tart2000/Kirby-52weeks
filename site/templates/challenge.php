@@ -36,13 +36,13 @@
         <div class="demo-blog__posts mdl-grid">
         <?php $counter = 1 ?>
 		<?php foreach($page->children() as $week) : ?>
-			<div class="mdl-card on-the-road-again mdl-cell mdl-cell--6-col">
+			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-shadow--2dp">
 	            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php echo $week->images()->first()->url() ?>)">
 	              <h3><a href="<?php echo $week->url() ?>"><?php echo $week->title(); ?></a></h3>
 	            </div>
 	            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
 	              	<div>
-	                	<strong><?php echo $page->title() ?> - Week <?php echo $counter ?>/52</strong>
+	                	<strong><?php echo $page->title() ?> - Week <?php echo $page->children()->count()-$counter+1 ?>/52</strong>
 	              	</div>
 	            </div>
 	        </div>

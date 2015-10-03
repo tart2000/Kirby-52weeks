@@ -18,6 +18,9 @@ fields:
     label: Link?
     type: url 
     width: 1/2
+  tool:
+    label: Tool(s) used (comma separated)
+    type: text
   postimage:
     label: Cover image
     type:  selector

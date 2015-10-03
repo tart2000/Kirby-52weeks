@@ -45,6 +45,14 @@ body {
 .mdl-card__media img {
   max-width: 120px;
 }
+.challenge_content .mdl-card:hover {
+  box-shadow: 0 6px 6px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 8px 0 rgba(0,0,0,.12);
+  -ms-transform: scale(1.2,1.2); /* IE 9 */
+  -webkit-transform: scale(1.2,1.2); /* Safari */
+  transform: scale(1.02,1.02);
+  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+}
 .pad16 {
   padding: 16px;
 }
