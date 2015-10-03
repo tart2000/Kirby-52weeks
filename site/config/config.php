@@ -19,6 +19,13 @@ c::set('license', 'put your license key here');
 
 /*
 
+
+Autopublish plugin configuration
+*/
+c::set('autopublish.templates', array('post', 'challenge'));
+
+/*
+
 ---------------------------------------
 Theme Configuration
 ---------------------------------------

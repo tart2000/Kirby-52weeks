@@ -15,7 +15,7 @@
         <?php else: ?>
           <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary">
         <?php endif ?>
-          <h3><?php echo $page->title() ?></h3>
+          <h3><?php echo $page->title() ?> - Week <?php echo $page->num() ?></h3>
         </div>
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
           <?php if ($page->author()): ?>
@@ -34,11 +34,11 @@
           <!-- <div class="meta__favorites">425 <i class="material-icons">favorite</i></div> -->
           <?php snippet('share') ?>
         </div>
-        <?php if (!$page->text()->empty()): ?>
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-          <?php echo $page->text()->kirbytext() ?>
+          <?php if (!$page->text()->empty()): ?>
+            <?php echo $page->text()->kirbytext() ?>
+          <?php endif ?>
         </div>
-        <?php endif ?>
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">
           <div class="comment mdl-color-text--grey-700">
 
@@ -48,7 +48,24 @@
         </div>
       </div>
 
-      <?php snippet('blog-navigation') ?>
+        <?php if ($page->hasNext()) : ?>
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
+            <a href="<?php echo $page->next()->url() ?>" class="mdl-button mdl-js-button mdl-button--raised">
+              ← Week <?php echo $page->num()+1 ?> 
+            </a>        
+          </div>
+        <?php endif ?>
+        <?php if ($page->hasPrev()) : ?>
+          <?php if ($page->hasNext()) : ?>
+          <?php else : ?>
+            <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone"><span></span></div>
+          <?php endif ?>  
+          <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone right">
+            <a href="<?php echo $page->prev()->url() ?>" class="mdl-button mdl-js-button mdl-button--raised">
+              Week <?php echo $page->num()-1 ?> →
+            </a>
+          </div>
+        <?php endif ?>
 
     </div>
 

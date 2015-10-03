@@ -7,6 +7,9 @@ password: >
 language: en
 role: admin
 history:
+  - challenges/3d-printing/new
+  - challenges/3d-printing/test
+  - challenges/3d-printing
   - challenges/3d-printing/legosahedron
   - blog/coffee-pic
 firstname: Arthur
