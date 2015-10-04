@@ -50,3 +50,5 @@
   </head>
   <?php if (!$bg = $page->files()->findBy('name', 'bg')) $bg = $site->files()->findBy('name', 'bg'); ?>
   <body>
+
+  <?php snippet('menu') ?>

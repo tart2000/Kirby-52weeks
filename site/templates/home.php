@@ -9,7 +9,7 @@
             <img src="<?php echo $site->url() ?>/assets/images/52weeks2.png">
           </div>
           <div class="challenge-title">
-            <h3>Get better at <span id="text-anim">craft</span>!</h3>
+            <h1>Get better at <span id="text-anim">craft</span>!</h1>
           </div>
         </div>
       <?php endif ?>
@@ -25,7 +25,7 @@
             'writing',
             'film & video',
             'music',
-            'technology'
+            'technology',
             'craft',
             ], i = 0; // i for counting
 

@@ -11,10 +11,25 @@ body {
   font-family: 'Roboto', 'Helvetica', sans-serif;
   background-color: #efefef;
 }
+h1 {
+  text-transform: uppercase;
+  font-size: 31px;
+  letter-spacing: 4px;
+  font-weight: 400;
+}
+.mdl-layout__header a {
+  color: white; 
+  text-decoration: none;
+}
+.mdl-layout__header {
+  position: fixed;
+  top: 0px;
+  background-color: transparent;
+}
 .right {
   text-align: right;
 }
-.mdl-button {
+.nav-button  {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -580,6 +595,19 @@ body {
   background-size: cover;
   border-radius: 22px;
   background-color: #F5F5F5;
+}
+.mdl-layout__header .minilogo {
+  width: 30px;
+  height: 30px;
+  background-image: url('images/avatar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  background-color: #F5F5F5;
+}
+.mdl-menu__container {
+  margin-top: 10px;
 }
 
 /* Fixes for IE 10 */

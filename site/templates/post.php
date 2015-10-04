@@ -2,11 +2,6 @@
 
 <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
   <main class="mdl-layout__content">
-    <div class="demo-back">
-      <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php echo $page->parent()->url() ?>">
-        <i class="material-icons">arrow_back</i>
-      </a>
-    </div>
     <div class="demo-blog__posts mdl-grid">
       <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col post">
         <?php $postcover = $page->postimage()->toFile(); ?>
@@ -50,7 +45,7 @@
 
         <?php if ($page->hasNext()) : ?>
           <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone">
-            <a href="<?php echo $page->next()->url() ?>" class="mdl-button mdl-js-button mdl-button--raised">
+            <a href="<?php echo $page->next()->url() ?>" class="mdl-button nav-button mdl-js-button mdl-button--raised">
               ← Week <?php echo $page->num()+1 ?> 
             </a>        
           </div>
@@ -61,7 +56,7 @@
             <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone"><span></span></div>
           <?php endif ?>  
           <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone right">
-            <a href="<?php echo $page->prev()->url() ?>" class="mdl-button mdl-js-button mdl-button--raised">
+            <a href="<?php echo $page->prev()->url() ?>" class="mdl-button nav-button mdl-js-button mdl-button--raised">
               Week <?php echo $page->num()-1 ?> →
             </a>
           </div>
