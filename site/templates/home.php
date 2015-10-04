@@ -49,7 +49,7 @@
         </div>
         <div class="col-3">
           <i class="material-icons">mood</i>
-          <p>Share it with the world and get better</p>
+          <p>Share it with the world and get feedback</p>
         </div>
       </div>
 

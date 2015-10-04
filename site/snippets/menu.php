@@ -8,7 +8,7 @@
 	    <nav class="mdl-navigation">
 	      	<!-- add other links here -->
 	    	<!-- <a class="mdl-navigation__link" href="">Sign in</a> -->
-	    </nav>
+	    
       	
 
   		<?php if($user = $site->user()): ?>
@@ -19,11 +19,18 @@
 	      <?php endif ?>
 	      	<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
 		    for="pop">
-			  <li class="mdl-menu__item">Some Action</li>
-			  <li class="mdl-menu__item">Another Action</li>
-			  <li disabled class="mdl-menu__item">Edit profile</li>
-			  <li disabled class="mdl-menu__item">Logout</li>
+		    	<?php $name = $user->username() ?>
+		    	<?php $challenges = page('challenges')->children()->filterBy('author', '==', $name) ?>
+		    	<?php foreach ($challenges as $c) : ?>
+			  		<li class="mdl-menu__item"><a href="<?php echo $site->url() ?>/panel/#/pages/show/<?php echo $c->uri() ?>/p:1">New in <?php echo $c->title() ?></a></li>
+			  	<?php endforeach ?>
+			  <li class="mdl-menu__item"><a href="<?php echo $site->url() ?>/panel/#/users/edit/<?php echo $user->username() ?>">Edit profile</a></li>
+			  <li class="mdl-menu__item"><a href="<?php echo url('logout') ?>">Logout</a></li>
 			</ul>
+		<?php else : ?>
+			<a class="mdl-navigation__link" href="#">Sign up</a>
+			<a class="mdl-navigation__link" href="<?php echo url('login') ?>">Log in</a>
 		<?php endif ?>
+		</nav>
     </div>
   </header>

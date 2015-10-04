@@ -29,7 +29,7 @@
     <main class="challenge_content">
         <div class="demo-blog__posts mdl-grid">
         <?php $counter = 1 ?>
-		<?php foreach($page->children() as $week) : ?>
+		<?php foreach($page->children()->flip() as $week) : ?>
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-shadow--2dp">
 	            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php echo $week->images()->first()->url() ?>)">
 	              <h3><a href="<?php echo $week->url() ?>"><?php echo $week->title(); ?></a></h3>

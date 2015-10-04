@@ -26,8 +26,19 @@ h1 {
   top: 0px;
   background-color: transparent;
 }
+.mdl-layout__container {
+  position: inherit;
+}
 .right {
   text-align: right;
+}
+.login {
+  margin-top: 150px;
+  background-color: white;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
 }
 .nav-button  {
   padding-left: 15px;
@@ -608,6 +619,7 @@ h1 {
 }
 .mdl-menu__container {
   margin-top: 10px;
+  right: 10px;
 }
 
 /* Fixes for IE 10 */
@@ -721,65 +733,8 @@ h1 {
 figure {margin: 0; }
 img {max-width: 100%; }
 
-.mode-search {
-  overflow: hidden;
-}
-
-.mode-search  form {
-  opacity: 1;
-  display: block;
-  pointer-events: all;
-  transform: opacity 0 .2s linear;
-}
-
-.mode-search .mdl-button--search {
-  transform: scale(70);
-  z-index: 10;
-}
-.mode-search .mdl-button--search i {
-  transform: scale(.01428571429); /* .01428571429 = 1/70 */
-  transform-origin: 0 0;
-}
-.mode-search .mdl-button--search i.icon--search {
-  opacity: 0;
-  transition: opacity 0 0s linear;
-}
-.mode-search .mdl-button--search i.icon--close {
-  opacity: 1;
-  transition: opacity .2s .2s linear;
-}
 
 
-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 100;
-  width: 50%;
-  display: none;
-  opacity: 0;
-}
-form input,
-form label {
-  font-size: 3em !important;
-  line-height: 1.4;
-}
-form label {opacity: .5; }
-form .mdl-textfield {width: 100%; }
-
-i.icon--close {
-  opacity: 0;
-}
-
-i.icon--search {
-  opacity: 1;
-  transition: opacity 0 .2s linear;
-}
-
-.mdl-button--search {
-  transition: transform .2s 0 ease-in-out;
-}
 
 .mdl-grid--alt {
   padding-left: 0;

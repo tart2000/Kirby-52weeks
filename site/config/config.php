@@ -24,6 +24,20 @@ Autopublish plugin configuration
 */
 c::set('autopublish.templates', array('post', 'challenge'));
 
+
+
+/* Setting logout route */
+
+c::set('routes', array(
+  array(
+    'pattern' => 'logout',
+    'action'  => function() {
+      if($user = site()->user()) $user->logout();
+      go('/');
+    }
+  )
+));
+
 /*
 
 ---------------------------------------
