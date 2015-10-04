@@ -22,7 +22,7 @@
     <meta name="description" content="<?php echo (($page->template() == 'post' || $page->template() == 'default') && !$page->text()->empty())? str::excerpt($page->text(), 250) : $site->description() ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo $page->title()->html() ?> - <?php echo $site->title()->html(); ?></title>
-
+    <link rel="icon" type="image/x-icon" href="<?php echo $site->url() ?>/assets/images/favicon.ico">
     <?php snippet('social-metas') ?>
 
     <!-- RSS feed -->

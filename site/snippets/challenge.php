@@ -7,15 +7,8 @@
     <?php if ($challenge->author()): ?>
         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
           <?php $author = $site->user($challenge->author()) ?>
-          <div class="minilogo" style="background-image: url(<?php echo $author->avatar()->url() ?>)"></div>
-          <div>
-          <?php if ($author->firstName() || $author->lastName()): ?>
-            <strong><?php echo $author->firstName() ?> <?php echo $author->lastName() ?></strong>
-          <?php else: ?>
-            <strong><?php echo $author->username() ?></strong>
-          <?php endif ?>
-            <span><?php echo 'week '.$challenge->children()->count().'/52' ?></span>
-          </div>
+          <?php $week = $page->children()->count() ?>
+          <?php snippet('avatar', array('author'=>$author, 'week'=>$week)) ?>
         </div>
   	<?php endif ?>
   	<div class="progress">

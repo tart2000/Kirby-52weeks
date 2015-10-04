@@ -10,21 +10,12 @@
         <?php else: ?>
           <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary">
         <?php endif ?>
-          <h3><?php echo $page->title() ?> - Week <?php echo $page->num() ?></h3>
+          <h3><?php echo $page->title() ?></h3>
         </div>
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
-          <?php if ($page->author()): ?>
-            <div class="minilogo" style="background-image: url(<?php echo $page->author()->avatar()->url() ?>)"></div>
-            <div>
-            <?php if ($page->author()->firstName() || $page->author()->lastName()): ?>
-              <strong><?php echo $page->author()->firstName() ?> <?php echo $page->author()->lastName() ?></strong>
-            <?php else: ?>
-              <strong><?php echo $page->author()->username() ?></strong>
-            <?php endif ?>
-              <span><?php echo kirbytext('(relativedate: ' . $page->date('Y-m-d') . ' lang: ' . $site->language()->code() . ')') ?></span>
-            </div>
-
-          <?php endif ?>
+          <?php $author = $site->user($page->parent()->author()) ?>
+          <?php $week = $page->num() ?>
+          <?php snippet ('avatar', array('author'=> $author, 'week'=>$week)) ?>
           <div class="section-spacer"></div>
           <!-- <div class="meta__favorites">425 <i class="material-icons">favorite</i></div> -->
           <?php snippet('share') ?>
