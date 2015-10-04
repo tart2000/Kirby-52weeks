@@ -3,9 +3,6 @@
 title: Week Project
 pages: false
 fields:
-  metas:
-    label: Metas
-    type: headline
   title:
     label: Title
     type:  text
