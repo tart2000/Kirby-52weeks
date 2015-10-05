@@ -12,9 +12,17 @@
 					<?php echo thumb($avatar, array('width' => 150, 'height' => 150, 'crop' => true)) ?>
 				<?php endif ?>
 			</div>
-			<h3><?php echo $page->title() ?> - Week <?php echo $page->children()->count() ?>/52</h3>
+			<h3><?php echo $page->title() ?></h3>
+			<p><strong>by <?php echo $user ?></strong></p>
 			<p><?php echo $page->text() ?></p>
-			<strong>by <?php echo $user ?></strong>
+			<?php if ($page->cat() != '') : ?>
+				<a href="#">
+					<div class="category mdl-shadow--2dp">
+						<?php echo $page->cat() ?>
+					</div>
+				</a>
+			<?php endif ?>
+			
 		</div>
 	</div>
 <?php endif ?>
@@ -28,7 +36,6 @@
 <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
     <main class="challenge_content">
         <div class="demo-blog__posts mdl-grid">
-        <?php $counter = 1 ?>
 		<?php foreach($page->children()->flip() as $week) : ?>
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-shadow--2dp">
 	            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php echo $week->images()->first()->url() ?>)">
@@ -36,11 +43,10 @@
 	            </div>
 	            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
 	              	<div>
-	                	<strong><?php echo $page->title() ?> - Week <?php echo $page->children()->count()-$counter+1 ?>/52</strong>
+	                	<strong><?php echo $page->title() ?> - Week <?php echo $week->num() ?></strong>
 	              	</div>
 	            </div>
 	        </div>
- 			<?php $counter++ ?>
 		<?php endforeach ?>
 		</div>
 		

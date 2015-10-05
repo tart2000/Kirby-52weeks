@@ -3,6 +3,13 @@
 	      <!-- Title -->
 	    <span class="mdl-layout-title"><a href="<?php echo $site->url() ?>">52weeks</a></span>
 	      <!-- Add spacer, to align navigation to the right -->
+	    
+	    <nav class="mdl-navigation">
+		    <?php if ($page->template() == 'post') : ?>
+			    <a class="mdl-navigation__link" href="<?php echo $page->parent()->url() ?>">> <?php echo $page->parent()->title() ?></a>
+			<?php endif ?>
+		</nav>
+
 	    <div class="mdl-layout-spacer"></div>
 	      <!-- Navigation -->
 	    <nav class="mdl-navigation">

@@ -21,6 +21,7 @@
           <?php snippet('share') ?>
         </div>
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+          <?php echo $page->template() ?>
           <?php if (!$page->text()->empty()): ?>
             <?php echo $page->text()->kirbytext() ?>
           <?php endif ?>
