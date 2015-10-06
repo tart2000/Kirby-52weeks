@@ -3,7 +3,7 @@
 
 <!-- top banner -->
 <?php if ($page->hasImages()) : ?>
-	<div class="challenge-head" style="background-image:url('<?php echo $page->images()->first()->url() ?>');">
+	<div class="challenge-head" style="background-image:url('<?php snippet('cover-image', array('post'=>$page)) ?>');">
 		<div class="challenge-title">
 			<?php $user = $page->author() ?>
 			<div class="avatar">
@@ -38,7 +38,7 @@
         <div class="demo-blog__posts mdl-grid">
 		<?php foreach($page->children()->flip() as $week) : ?>
 			<div class="mdl-card mdl-cell mdl-cell--6-col mdl-shadow--2dp">
-	            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php echo $week->images()->first()->url() ?>)">
+	            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php snippet('cover-image', array('post' =>$week)) ?>)">
 	              <h3><a href="<?php echo $week->url() ?>"><?php echo $week->title(); ?></a></h3>
 	            </div>
 	            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">

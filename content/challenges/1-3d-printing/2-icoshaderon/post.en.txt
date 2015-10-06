@@ -6,7 +6,60 @@ Date: 2015-10-02
 
 ----
 
-Text: Generative lampshade. 18h print!
+Text: 
+
+Generative lampshade. 
+It took 18 hours to print!
+Just a few lines of code : 
+```
+thickness = 0.01; 
+nombre = 5;
+
+module ico () {
+    r = sqrt(3 / (1 + 2*sqrt(5)/5) - 1);
+    for (j = [0, 180]) rotate([0, j, 0])
+      for (i = [0:4]) rotate([0, 0, i * 360 / 5])
+        for (k = [0, 1]) rotate([0, -atan(r) - 2*k*atan(r/2), 0])
+            rotate([0, 0, 180*k]) cylinder(1, 0, r, $fn=3);
+}
+module plate () {
+    rotate ([0,0,90])
+        translate ([-thickness/2, -2.5,-2.5]) 
+            cube ([thickness,5,5]);
+}
+module plate2 () {
+    rotate ([0, 31.7,72])  
+        translate ([-thickness/2, -2.5,-2.5])
+            cube ([thickness,5,5]);
+}
+module trelace() {
+    intersection () {
+        ico ();
+        for (i=[0 : 5*nombre])  
+            rotate ([0,0,i*360/5/nombre])
+                plate();
+    }
+    intersection () {
+        ico(); 
+        for (i=[0 : 5*nombre])  
+            rotate ([0,0,i*360/5/nombre])
+                plate2();
+    }
+    cylinder (r=0.14,h=1.22, $fn=20);
+}
+module off() {
+    sphere (d=1.85, $fn=30);
+    cylinder(r=0.1,h=2,$fn=50);
+    mirror([0,0,1])
+        cylinder(r=0.5,h=1.5, $fn=20);
+    translate([0,0,-1.84])
+        cylinder(r=1,h=1);
+}
+difference() {
+    trelace();
+    off();
+}
+```
 
 ----
 
@@ -14,4 +67,8 @@ Link:
 
 ----
 
-Postimage: DSC_0039.JPG
+Postimage: jrtv.JPG
+
+----
+
+Tool: OpenSCAD

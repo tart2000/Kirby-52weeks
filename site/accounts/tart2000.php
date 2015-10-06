@@ -7,8 +7,9 @@ password: >
 language: en
 role: admin
 history:
+  - challenges/3d-printing/legosahedron
+  - challenges/3d-printing/icoshaderon
   - challenges/3d-printing
   - categories/technology
-  - challenges/3d-printing/legosahedron
 firstname: Arthur
 lastname: Schmitt
