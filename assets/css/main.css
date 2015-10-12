@@ -629,25 +629,16 @@ h3 {
 .demo-blog .amazing .mdl-card__title {
   background-color: #263238;
 }
-.demo-blog .minilogo {
-  width: 44px;
-  height: 44px;
-  background-image: url('images/avatar.png');
+.minilogo {
+  background-image: url('../images/avatar.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 22px;
-  background-color: #F5F5F5;
+  border-radius: 50%;
 }
-.mdl-layout__header .minilogo {
-  width: 30px;
-  height: 30px;
-  background-image: url('images/avatar.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 15px;
-  background-color: #F5F5F5;
+.challenge-title .minilogo {
+  margin-right: auto;
+  margin-left: auto;
 }
 .mdl-menu__container {
   margin-top: 10px;

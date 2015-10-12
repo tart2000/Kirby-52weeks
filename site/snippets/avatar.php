@@ -6,4 +6,4 @@
 	<?php $avatar = '/assets/images/avatar.jpg' ?>
 <?php endif ?>
 
-<div class="minilogo" style="background-image: url(<?php echo $avatar ?>)"></div>
+<div class="minilogo" <?php e($ifid,'id='.$ifid) ?> style="background-image: url(<?php echo $avatar ?>); <?php e($size!='','width:'.$size.'px;') ?> <?php e($size!='','height:'.$size.'px;') ?>"></div>

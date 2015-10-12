@@ -8,7 +8,7 @@
         <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
           <?php $author = $site->user($challenge->author()) ?>
           <?php $week = $page->children()->count() ?>
-          <?php snippet('avatar', array('author'=>$author)) ?>
+          <?php snippet('avatar', array('author'=>$author, 'size'=>44, 'ifid'=>'')) ?>
           <div class="left">
             <?php if ($author->firstName() || $author->lastName()): ?>
               <strong><?php echo $author->firstName() ?> <?php echo $author->lastName() ?></strong>

@@ -6,11 +6,9 @@
 	<div class="challenge-head" style="background-image:url('<?php snippet('cover-image', array('post'=>$page)) ?>');">
 		<div class="challenge-title">
 			<?php $user = $page->author() ?>
-			<div class="avatar">
-				<?php if($avatar = $site->user($user)->avatar()): ?>
-					<?php $image = $avatar->url() ?>
-					<?php echo thumb($avatar, array('width' => 150, 'height' => 150, 'crop' => true)) ?>
-				<?php endif ?>
+			<?php $author = $site->user($page->author()) ?>
+			<div class="center">
+				<?php snippet('avatar', array('author'=>$author, 'size'=>150, 'ifid'=>'')) ?>
 			</div>
 			<h3><?php echo $page->title() ?></h3>
 			<p><strong>by <?php echo $user ?></strong></p>

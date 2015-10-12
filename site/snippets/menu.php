@@ -17,13 +17,8 @@
 	    	<!-- <a class="mdl-navigation__link" href="">Link</a> -->
 
 	  		<?php if($user = $site->user()): ?>
-		      <?php if($avatar = $user->avatar()): ?>
-		      	<div id="pop" class="minilogo" style="background-image: url(<?php echo $avatar->url() ?>)"></div>
-		      <?php else: ?>
-		      	<div id="pop" class="minilogo" style="background-image: url(<?php echo url('assets/images/avatar.jpg') ?>)"></div>
-		      <?php endif ?>
-		      	<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-			    for="pop">
+	  			<?php snippet('avatar',array('author'=>$user,'size'=>30,'ifid'=>'pop')) ?>
+		      	<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="pop">
 			    	<?php $name = $user->username() ?>
 			    	<?php $challenges = page('challenges')->children()->filterBy('author', '==', $name) ?>
 			    	<?php foreach ($challenges as $c) : ?>
