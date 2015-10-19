@@ -1,0 +1,17 @@
+Title: Sverchock
+
+----
+
+Author: papermanu
+
+----
+
+Cat: technology
+
+----
+
+Postimage: maxresdefault.jpg
+
+----
+
+Text: Parametric design and stuff with Sverchock, a Blender addon.

@@ -1,7 +1,6 @@
 <?php snippet('header') ?>
 
-<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
-  <main class="mdl-layout__content">
+  <main class="mdl-layout__content demo-blog--blogpost">
     <div class="demo-blog__posts mdl-grid">
       <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col post">
         <div class="mdl-card__media mdl-color-text--grey-50 mdl-color--primary" style="background-image: url('<?php snippet('cover-image', array('post'=>$page)) ?>')">
@@ -10,7 +9,7 @@
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
           <?php $author = $site->user($page->parent()->author()) ?>
           <?php $week = $page->num() ?>
-          <?php snippet ('avatar', array('author'=> $author)) ?>
+          <?php snippet ('avatar', array('author'=> $author, 'size'=>44,'ifid'=>'')) ?>
           <div class="left">
             <?php if ($author->firstName() || $author->lastName()): ?>
               <strong><?php echo $author->firstName() ?> <?php echo $author->lastName() ?></strong>
@@ -42,6 +41,13 @@
           <?php endif ?>
           <?php if ($page->link() != '') : ?>
             <a href="<?php echo $page->link() ?>" target="_blank"><?php echo $page->link() ?></a>
+          <?php endif ?>
+          <?php if ($page->hasFiles()) : ?>
+            <?php foreach ($page->files() as $doc) : ?>
+              <?php if ($doc->type() != 'image') : ?>
+                <a href="<?php echo $doc->url() ?>" download><?php echo $doc->name() ?> (<?php echo $doc->niceSize() ?>)</a>
+              <?php endif ?>
+            <?php endforeach ?>
           <?php endif ?>
         </div>
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments">

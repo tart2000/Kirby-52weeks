@@ -20,6 +20,9 @@ h1 {
 h3 {
   margin-bottom: 3px;
 }
+.center {
+  text-align: center;
+}
 #gallery {
   margin-bottom: 15px;
 }
@@ -35,6 +38,13 @@ h3 {
   padding-left: 30px;
   padding-top: 0px;
 }
+.mdl-layout__drawer a {
+  color: grey;
+  text-decoration: none;
+}
+.mdl-layout__drawer {
+  position: fixed;
+}
 .mdl-layout__header a {
   color: white; 
   text-decoration: none;
@@ -47,11 +57,19 @@ h3 {
 .mdl-layout__container {
   position: inherit;
 }
+.mdl-card__media h3, .challenge-title {
+  text-shadow: 1px 1px 6px #a7a7a7;
+}
 .right {
   text-align: right;
 }
 .left {
   text-align: left;
+}
+.categories {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 .category {
   padding-top: 4px;
@@ -60,12 +78,13 @@ h3 {
   padding-right: 10px;
   margin-right: 8px; 
   margin-left: 8px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   background-color: orange; 
   border-radius: 15px;
   color: white;
   text-transform: capitalize;
   display: inline-flex;
+  cursor: pointer;
 }
 
 .login {

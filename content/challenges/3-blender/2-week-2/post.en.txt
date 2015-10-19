@@ -1,0 +1,28 @@
+Title: Week 2
+
+----
+
+Date: 2015-10-18
+
+----
+
+Link: 
+
+----
+
+Tool: sverchock, mandelbrot
+
+----
+
+Happiness: 5
+
+----
+
+Postimage: 02_fractals.jpg
+
+----
+
+Text: 
+
+Using Sverchock to create fractals!
+Set the base shape, then wait for the Sverchock graph to generate the 2D path.

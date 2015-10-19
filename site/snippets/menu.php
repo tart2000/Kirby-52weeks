@@ -34,4 +34,20 @@
 
 		</nav>
     </div>
-  </header>
+</header>
+
+<div class="mdl-layout__drawer">
+    <span class="mdl-layout-title"><a href="<?php echo $site->url() ?>"><?php echo $site->title() ?></a></span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="<?php echo $site->url() ?>/challenges">Challenges</a>
+      <a class="mdl-navigation__link" href="#">FAQ</a>
+      <hr>
+      <a class="mdl-navigation__link" href="#">Feedback</a>
+
+<!--       	<hr>
+      	<strong>Categories</strong>
+      	<?php foreach (page('categories')->children() as $cat) : ?>
+      		<a class="mdl-navigation__link" href="<?php echo $site->url() ?>/challenges"><?php echo $cat->title() ?></a>
+	    <?php endforeach ?> -->
+    </nav>
+</div>

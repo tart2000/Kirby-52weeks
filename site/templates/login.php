@@ -1,6 +1,5 @@
 <?php snippet('header') ?>
 
-<div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout is-upgraded">
   <main class="mdl-layout__content">
     <div class="demo-blog__posts mdl-grid">
       <div class="login">

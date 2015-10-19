@@ -1,7 +1,8 @@
+
 <?php snippet('header') ?>
 
-<div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-      <main class="mdl-layout__content">
+
+    <main class="mdl-layout__content">
       <!-- top banner -->
       <?php if ($page->hasImages()) : ?>
         <div class="challenge-head" style="background-image:url('<?php echo $page->images()->first()->url() ?>');">
@@ -53,14 +54,25 @@
         </div>
       </div>
 
-  
-        <div class="demo-blog__posts mdl-grid">
-
-          <?php foreach (page('challenges')->children() as $challenge): ?> 
-            <?php snippet('challenge', array('page'=>$page, 'challenge'=>$challenge, 'columns'=>3)) ?>
-          <?php endforeach ?>
-
-          <?php snippet('blog-navigation') ?>
+      <div class="demo-blog__posts mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h4>Recent activity</h4>
         </div>
+        <?php $last= $site->index()->filterBy('template', 'post')->sortBy('date', 'desc')->limit(3) ?>
+        <?php foreach ($last as $post) : ?>
+          <?php snippet('week', array('week'=>$post, 'col'=>3)) ?>
+        <?php endforeach ?>
+      </div>
+
+      <div class="demo-blog__posts mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h4>Challenges</h4>
+        </div>
+        <?php foreach (page('challenges')->children() as $challenge): ?> 
+          <?php snippet('challenge', array('page'=>$page, 'challenge'=>$challenge, 'columns'=>3)) ?>
+        <?php endforeach ?>
+
+        <?php snippet('blog-navigation') ?>
+      </div>
 
 <?php snippet('footer') ?>

@@ -63,7 +63,7 @@ difference() {
 
 ----
 
-Link: 
+Link: http://www.thingiverse.com/thing:1056083
 
 ----
 
@@ -72,3 +72,7 @@ Postimage: jrtv.JPG
 ----
 
 Tool: OpenSCAD
+
+----
+
+Happiness: 5

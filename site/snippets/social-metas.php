@@ -8,7 +8,7 @@
   <?php else: ?>
     <meta name="twitter:description" content=" - ">
   <?php endif; ?>
-  <meta name="twitter:image" content="<?php echo ($cover = $page->cover())? $cover->url() : $site->files()->findBy('name', 'social-header')->url() ?>">
+  <meta name="twitter:image" content="<?php echo ($cover = $page->postimage())? $cover->url() : $site->files()->findBy('name', 'social-header')->url() ?>">
 <?php else: ?>
   <meta name="twitter:title" content="<?php echo $site->title() ?>">
   <meta name="twitter:description" content="<?php echo $site->description() ?>">
@@ -25,7 +25,7 @@
   <?php else: ?>
     <meta name="twitter:description" content=" - ">
   <?php endif; ?>
-  <meta property="og:image" content="<?php echo ($cover = $page->cover())? $cover->url() : $site->files()->findBy('name', 'social-header')->url() ?>" />
+  <meta property="og:image" content="<?php echo ($cover = $page->postimage())? $cover->url() : $site->files()->findBy('name', 'social-header')->url() ?>" />
 <?php else: ?>
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<?php echo $site->title() ?>" />

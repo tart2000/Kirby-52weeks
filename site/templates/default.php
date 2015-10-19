@@ -1,6 +1,5 @@
 <?php snippet('header') ?>
 
-<div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
     <?php if ($header = $page->files()->findBy('name', 'header')): ?>
       <div class="demo-ribbon mdl-color--primary mdl-layout__content" style="background-image: url(<?php echo $header->url() ?>)">
     <?php else: ?>

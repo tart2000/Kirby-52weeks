@@ -51,4 +51,5 @@
   <?php if (!$bg = $page->files()->findBy('name', 'bg')) $bg = $site->files()->findBy('name', 'bg'); ?>
   <body>
 
+  <div class="demo-blog mdl-layout--fixed-header mdl-js-layout mdl-layout">
   <?php snippet('menu') ?>

@@ -23,18 +23,18 @@
    * Search Form
    *
    */
-  var body = document.querySelector('body');
-  var searchButton = document.querySelector('button.mdl-button--search');
+  // var body = document.querySelector('body');
+  // var searchButton = document.querySelector('button.mdl-button--search');
 
-  searchButton.addEventListener('click', function (e) {
-    body.classList.toggle('mode-search');
-  });
+  // searchButton.addEventListener('click', function (e) {
+  //   body.classList.toggle('mode-search');
+  // });
 
-  // pressing 'escape' close the search form
-  document.addEventListener('keydown', function(e) {
-    if (e.keyCode == 27) {
-      body.classList.remove('mode-search');
-    }
-  });
+  // // pressing 'escape' close the search form
+  // document.addEventListener('keydown', function(e) {
+  //   if (e.keyCode == 27) {
+  //     body.classList.remove('mode-search');
+  //   }
+  // });
 
 })();
