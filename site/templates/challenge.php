@@ -14,7 +14,7 @@
 			<p><strong>by <?php echo $user ?></strong></p>
 			<p><?php echo $page->text() ?></p>
 			<?php if ($page->cat() != '') : ?>
-				<a href="#">
+				<a href="<?php echo $site->url().'/challenges/'.'cat:'.$page->cat() ?>">
 					<div class="category mdl-shadow--2dp">
 						<?php echo $page->cat() ?>
 					</div>

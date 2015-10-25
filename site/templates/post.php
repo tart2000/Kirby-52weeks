@@ -23,7 +23,9 @@
           <?php snippet('share') ?>
         </div>
         <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
-          <div id="gallery"></div>
+          <div id="gallery">
+            <div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+          </div>
           <script>
             images = [
             <?php foreach ($page->images() as $i) : ?> 

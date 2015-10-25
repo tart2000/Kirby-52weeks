@@ -1,1 +1,27 @@
 Title: Home
+
+----
+
+Intro: 
+
+- 
+  titre: Set your goals
+  texte: >
+    Choose a category and define your own
+    challenge
+  icone: map
+  image: cpu.png
+- 
+  titre: Get making!
+  texte: >
+    Get inspired and practice your skill,
+    one week at a time
+  icone: gesture
+  image: photo.png
+- 
+  titre: Share!
+  texte: >
+    Post your progress and get feedback from
+    the community
+  icone: mood
+  image: sky.png

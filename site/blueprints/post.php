@@ -3,6 +3,12 @@
 title: Week Project
 pages: false
 fields:
+  info: 
+    label: Info
+    type: info
+    text: > 
+      Use 'Files / Add' to upload an image, and then select the one you want as a cover.</br>  
+      Please don't add pictures bigger than 2000px.
   title:
     label: Title
     type:  text

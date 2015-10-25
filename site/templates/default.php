@@ -5,11 +5,7 @@
     <?php else: ?>
       <div class="demo-ribbon mdl-color--primary mdl-layout__content">
     <?php endif ?>
-            <div class="demo-back">
-      <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="<?php echo $site->index()->filterBy('template', 'home')->first()->url() ?>">
-        <i class="material-icons">arrow_back</i>
-      </a>
-    </div>
+
             <?php snippet('menu') ?>
             <!-- <div class="mdl-layout-spacer"></div> -->
       </div>

@@ -1,5 +1,5 @@
 <?php $columns = 12/$columns; ?>
-<div class="mdl-card on-the-road-again mdl-cell mdl-cell--<?php echo $columns ?>-col mdl-shadow--2dp">
+<div class="mdl-card mdl-cell mdl-cell--<?php echo $columns ?>-col mdl-shadow--2dp">
     <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url(<?php snippet('cover-image', array('post'=>$challenge)) ?>)">
       <h3><a href="<?php echo $challenge->url() ?>"><?php echo $challenge->title(); ?></a></h3>
     </div>

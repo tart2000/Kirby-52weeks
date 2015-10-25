@@ -43,6 +43,19 @@
       <a class="mdl-navigation__link" href="#">FAQ</a>
       <hr>
       <a class="mdl-navigation__link" href="#">Feedback</a>
+      <hr>
+      <?php if($user = $site->user()): ?>
+		    	<?php $name = $user->username() ?>
+		    	<?php $challenges = page('challenges')->children()->filterBy('author', '==', $name) ?>
+		    	<?php foreach ($challenges as $c) : ?>
+			  		<a href="<?php echo $site->url() ?>/panel/#/pages/show/<?php echo $c->uri() ?>/p:1" class="mdl-navigation__link">New in <?php echo $c->title() ?></a>
+			  	<?php endforeach ?>
+			  <a href="<?php echo $site->url() ?>/panel/#/users/edit/<?php echo $user->username() ?>" class="mdl-navigation__link">Edit profile</a>
+			  <a href="<?php echo url('logout') ?>" class="mdl-navigation__link">Logout</a>
+		<?php else : ?>
+			<a class="mdl-navigation__link" href="#">Sign up</a>
+			<a class="mdl-navigation__link" href="<?php echo url('login') ?>">Log in</a>
+		<?php endif ?>
 
 <!--       	<hr>
       	<strong>Categories</strong>

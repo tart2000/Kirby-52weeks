@@ -7,10 +7,10 @@ password: >
 language: en
 role: admin
 history:
+  - home
   - challenges/3d-printing/cat-skull-mas
   - challenges/drawing
   - challenges/3d-printing/skull-mask
   - challenges/blender
-  - challenges/3d-printing/icoshaderon
 firstname: Arthur
 lastname: Schmitt

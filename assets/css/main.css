@@ -42,6 +42,33 @@ h3 {
   color: grey;
   text-decoration: none;
 }
+.grid-fix {
+  padding: 0px;
+}
+.col-fix {
+  margin: 0px;
+  width: 33.3333333%;
+  min-height: 250px;
+  padding: 50px;
+  background-size: cover;
+  color:white;
+}
+.col-fix i {
+  font-size: 80px;
+}
+.col-fix p {
+  font-size: 1.2em;
+}
+@media (max-width: 479px) {
+  .col-fix {
+      width: 100% !important;
+  }
+}
+.icon {
+  width: 100%;
+  text-align: center;
+}
+
 .mdl-layout__drawer {
   position: fixed;
 }
@@ -59,6 +86,13 @@ h3 {
 }
 .mdl-card__media h3, .challenge-title {
   text-shadow: 1px 1px 6px #a7a7a7;
+}
+.mdl-card__media {
+  box-shadow: inset 0 -200px 180px -200px rgba(0,0,0,0.7);
+}
+.mdl-spinner {
+  margin-right: auto;
+  margin-left: auto;
 }
 .right {
   text-align: right;
@@ -114,18 +148,7 @@ h3 {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.col-3 {
-  width: 33%; 
-  text-align: center;
-  display: inline-block;
-  padding-bottom: 20px;
-}
-.col-3 i {
-  font-size: 80px;
-}
-.col-3 p {
-  font-size: 1.2em;
-}
+
 @media screen and (max-width: 480px) {
   .col-3 {
   width: 100%; 
@@ -774,8 +797,9 @@ h3 {
 
 figure {margin: 0; }
 img {max-width: 100%; }
-
-
+select, option {
+  font-family: roboto;
+}
 
 
 .mdl-grid--alt {
